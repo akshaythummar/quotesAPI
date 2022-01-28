@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const QuoteRoutes = require('./routes/quote');
 const app = express();
+
 const cors = require('cors');
 
 app.use(cors());
@@ -20,6 +21,6 @@ app.get('/', (req, res) => {
 	res.send("Let's build an API");
 });
 
-app.use('/quote', QuoteRoutes); // middleware
+app.use('/quote', QuoteRoutes); //middleware
 
 app.listen(process.env.PORT || 3000);
